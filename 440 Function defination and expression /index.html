@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Function Declaration and expression</title>
+</head>
+<body>
+    <script>
+        function quack(num) {
+            for ( var i =0; i < num; i++) {
+                console.log("Quack!");
+            }
+        } 
+
+        var fly = function(num) {
+            for( var i=0; i<num; i++) {
+                console.log("Flying!");            }
+        }
+
+        var superFly = fly;
+        superFly(2);
+
+        var superQuack = quack;
+        superQuack(3);
+    
+    </script>
+</body>
+</html>

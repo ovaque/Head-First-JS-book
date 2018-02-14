@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Variation 2</title>
+</head>
+<body>
+    <h3> Returning a function call here..</h3>
+    <script>
+        var justAVar = "Oh, don't you worry about it, I'm GLOBAL";
+
+        function whereAreYou() {
+            var justAVar = "just an every day LOCAL";
+            
+            function inner() {
+
+            return justAVar;
+            }
+
+            return inner();  // we are calling inner here and returning its result...
+        }
+
+        var result = whereAreYou();
+        console.log(result);
+    </script>
+</body>
+</html>

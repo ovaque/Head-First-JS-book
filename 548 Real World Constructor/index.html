@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> REAL WORLD CONSTRUCTOR...</title>
+</head>
+<body>
+    <script>
+
+        var now = new Date();
+
+        var dateString = now.toString(); // returns string that represent date
+        console.log(dateString);
+
+        var theYear = now.getFullYear(); // returns the year in date
+        console.log(theYear);
+
+        var theDayOfWeek = now.getDay(); // returns a no. for the day of the week
+        console.log(theDayOfWeek);
+
+        var birthday = new Date("September 25, 1991");
+        console.log(birthday);
+
+        var emptyArray = new Array();  // creates an empty array..
+
+        emptyArray[0] = 9;
+
+        console.log(emptyArray);
+
+        var oddNumbers = new Array(3); // creates an array with 3 indices..
+        oddNumbers[0] = 1;
+        oddNumbers[1] = 3;
+        oddNumbers[2] = 5;
+
+        console.log(oddNumbers);
+
+        var reverse = oddNumbers.reverse(); // reverses the array..
+        console.log(reverse);
+
+        var aString = oddNumbers.join("-"); // joins the items into a string with "-" between them.
+        console.log(aString);
+
+        var areAllOdd = oddNumbers.every(function(x){
+            return (( x % 2) !== 0);
+        })
+
+        console.log(areAllOdd);
+
+
+    </script>
+</body>
+</html>

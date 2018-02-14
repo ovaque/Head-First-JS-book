@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Exercise code</title>
+</head>
+<body>
+    <button id="bake"> Bake</button>
+    <script>
+        window.onload = init;
+        var cookies = {
+            instructions: "Preheat oven to 350..",
+            bake: function(time) {
+                console.log("Baking the cookies...");
+                setTimeout(done, time);
+            }
+        };
+
+        function init() {
+            var button = document.getElementById("bake");
+            button.onclick = handleButton;
+        }
+
+        function handleButton(){
+            console.log("Time to bake the cookies.");
+            cookies.bake(2500);
+        }
+
+        function done(){
+            alert("cookies are ready, take them out to cool.");
+            console.log("cooling the cookies.");
+            var cool = function() {
+                alert("cookies are cool, time to eat");
+            };
+            setTimeout(cool, 1000);
+        }
+    
+    </script>
+</body>
+</html>

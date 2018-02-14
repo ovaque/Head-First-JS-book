@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Equality </title>
+</head>
+<body>
+    <h1> LEts see the workomg of equality operator</h1>
+    <script>
+        if(99 == "99"){
+            console.log("A number equals a string containing numbers");
+        } else{
+            console.log("No way a number equals a string");
+        }
+        var testMe = 99;
+        if (testMe == "99"){
+            console.log("string is converted into number and compared, results: TRUE")
+        }
+        var testMe1 = "abcdf";
+        if (testMe1 == 99){
+            console.log("string was of letters, ");
+        } else{
+            console.log("Nan");
+        }
+        if(1 == true){
+            console.log(" Boolean can be compared to a number 0 and 1");
+        }
+        if("1" == true){
+            console.log("Boolean can be compared to a string also");
+        }
+        var testThis;
+        var testThat = undefined;
+        if( testThis == testThat){
+            console.log("undefined always TRUE with null");
+        }
+        if( 0 ==""){
+            console.log("empty string is converted to 0");
+        }
+        if (99 <= "100"){
+            console.log("It's TRUE");
+        }
+        var addi = 3 + "4"; // concatination
+        var plusi = 3 + 4;  // addition 
+        var addii = 1 + (2 + "3"); // sees a string operation is concatenation
+        var adds = (1 + 2) +"3"; // rest operators works the same
+        var multi = "3" * "4";
+        console.log(addi);
+        console.log(plusi);
+        console.log(addii);
+        console.log(adds);
+        console.log(multi);
+    
+    </script>
+</body>
+</html>

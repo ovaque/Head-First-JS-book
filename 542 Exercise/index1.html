@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Car OC </title>
+</head>
+<body>
+    <script>
+
+        var cadiParams = {
+            make: "GM",
+            model: "Cadillac",
+            year: 1955,
+            color: "tan",
+            passengers: 5,
+            convertible: false,
+            mileage: 12832
+        };
+
+        var limoParams = {
+            make: "Webville Motors",
+            model: "limo",
+            year: 1983,
+            color: "black",
+            passengers: 12,
+            convertible: true,
+            mileage: 21120
+        };
+
+        function Car(params){
+            this.make = params.make;
+            this.model = params.model;
+            this.year = params.year;
+            this.color = params.color;
+            this.passengers = params.passengers;
+            this.convertible = params.convertible;
+            this.mileage = params.mileage;
+            this.started = false;
+            this.start = function(){
+                this.started = true;
+            };
+            this.stop = function(){
+                this.started = false;
+            };
+            this.drive = function(){
+                if(this.started) {
+                    console.log(this.make + " " + this.model + " goes zoom zoom!");
+                } else {
+                    console.log(" Start the engine first.");
+                }
+            };
+
+        }
+
+        var cadi = new Car(cadiParams);
+        
+        var limo = new Car(limoParams);
+        var limoDog = new Dog("Rhapsody In Blue", "Poodle", 40); 
+
+/*        var cars = [cadi];
+
+        for( var i =0; i < cars.length; i++){
+            cars[i].start();
+            cars[i].drive();
+            cars[i].drive();
+            cars[i].stop();
+        }  */
+
+        function Dog(name, breed, weight) {
+            this.name = name;
+            this.breed = breed;
+            this.weight = weight;
+            this.bark = function(){
+                if (this.weight > 25) {
+                    alert(this.name + " says Woof!");
+                } else {
+                    alert(this.name + " says Yip!");
+                }
+            };
+        }
+
+        var fido = new Dog("fido", "mixed", 38);
+        var fluffy = new Dog("fluffy", "Poodle", 30);
+        var spot = new Dog("Spot", " Chihuahua", 10);
+        var dogs = [fido, fluffy, spot];
+
+        for( var  i =0; i < dogs.length; i++) {
+            var size = "small";
+            if( dogs[i].weight > 10) {
+                size = "large";
+            }
+
+            console.log("Dog: " + dogs[i].name + " is a " + size + " " + dogs[i].breed);
+        }
+
+        for (var  i =0; i < dogs.length; i++){
+            dogs[i].bark();
+        }
+
+        console.log(limo.make + " " + limo.model + " is a " + typeof limo);
+        console.log(limoDog.name + " is a " + typeof limoDog);
+
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Variables</title>
+</head>
+<body>
+    <h1> Lets see what changes in values occurs </h1>
+    <script>
+    var var1=10;
+    function hehe(var2){
+        var3=15;
+        var2++;
+        var1--;
+        console.log(var3 + "  var3 global variable declared inside function hehe" );
+        console.log(var2 + " var2 parameter of function hehe");
+        console.log(var1 + " var1 global variable declared outside the function hehe");
+    }
+
+    console.log(var1 + " starting value of var1");
+
+    function hoho(var1){
+        var var1=20;
+        console.log(var1 + " shadowing global variable var1 here");
+    }
+    hehe(var1);
+    hoho(var1);
+
+        console.log(var3 + " var3 outside function");
+        console.log(var1 + " var1 outside function");
+    </script>
+    
+</body>
+</html>

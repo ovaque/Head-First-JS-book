@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Array Sort </title>
+</head>
+<body>
+    <script>
+        var numbersArray = [60, 50, 62, 58, 54, 54];
+        function compareNumbers(num1, num2) {
+            if( num1 > num2) {
+                return 1;
+            } else if( num1 === num2) {
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+
+        function compNums(num1, num2) {
+            if (num1 < num2) {
+                return 1;
+            } else if ( num1 === num2) {
+                return 0;
+            } else {
+                return -1;
+            }
+        }
+        numbersArray.sort(compareNumbers);
+        console.log(numbersArray);
+
+        numbersArray.sort(compNums);
+        console.log(numbersArray);
+    
+    </script>
+</body>
+</html>

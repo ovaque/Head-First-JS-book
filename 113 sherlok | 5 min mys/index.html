@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank Robbery</title>
+</head>
+<body>
+    <h1>Sherlok says its a FAILED bank robbery!</h1>
+    <script>
+    var balance=10500;
+    var cameraOn=true;
+
+    function steal(balance, amount){
+        cameraOn=false;
+        if(amount < balance){
+            balance = balance - amount;
+        }
+        return amount;
+        cameraOn=true;
+    }
+
+    var amount= steal(balance, 1250);
+    alert("you stole " + amount + "! Balance: "+ balance);
+    </script>
+</body>
+</html>

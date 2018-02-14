@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Be the Browser</title>
+</head>
+<body>
+    <h1> BE THE BROWSER</h1>
+    <script>
+    var song = {
+        name: "Walk This Way",
+        artist: "Run-D.M.C",
+        minutes: 4,
+        seconds: 3,
+        genre: "80s",
+        playing: false,
+
+        play: function(){
+            if(!this.playing){
+                this.playing = true;
+                console.log("Playing " + this.name + " by " + this.artist);
+            }
+        },
+
+        pause: function(){
+            if(this.playing){
+                this.playing = false;
+            }
+        }
+    };
+
+    song.play();
+    song.pause();
+    </script>
+    
+</body>
+</html>
